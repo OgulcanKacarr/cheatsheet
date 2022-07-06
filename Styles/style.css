@@ -1,0 +1,321 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* kutu genişlikleri */
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+/*satılar*/
+.row{
+	border: solid green 5px;
+	background: black;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+}
+/*satırlar yan yana gelmesin*/
+.row::after{
+	content:"";
+	clear: both;
+	display: table;
+}
+/*tepkisel resimler*/
+img{
+	width: 100%;
+	height: auto;
+}
+/*aynı satır içindeki kutuların birbirine yaslanması*/
+[class*="col-"]{
+	float: left;
+	padding: 5px;
+	border-radius: 10px;
+
+
+}
+/*telefonlar için*/
+@media only screen and (max-width:768px){
+	[class*="col-"]{
+		width: 50%;
+	}
+	[class*="10"]{
+		width: 100%;
+		float: right;
+	}
+	#menu #anamenu ul li{
+		width: 100%;
+		float: left;
+	}
+
+
+}
+
+}
+
+/*menu boyutları*/
+#üst{
+	min-height: 100px;
+
+}
+#menu{
+	min-height: 100px;
+	
+		
+}
+#orta{
+	min-height: 400px;
+}
+#alt{
+	min-height: 50px;
+}
+#logo{
+	background: none;
+	border: none;
+}
+/*ikonlar*/
+#icon{
+	width: 50px;
+	float: right;
+	margin-right: 5px;
+}
+
+a:link{
+	color: green;
+}
+a:visited{
+	color: blueviolet;
+}
+a:hover{
+	color: cadetblue;
+}
+a:active{
+	color: lightgray;
+}
+
+
+/*anamenu listesi*/
+#menu #anamenu ul{
+	list-style: none;
+}
+/*anamenu liste elemanları*/
+#menu #anamenu ul li{
+	border: 1px green solid;
+	float: left;
+	width: 11.11%;
+	text-align: center;
+	padding: 5px;
+}
+/*anamenu liste linkleri*/
+#menu #anamenu li a{
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+#menu #anamenu li a:link{
+color: yellow;
+}
+#menu #anamenu li a:visited{
+color: red;
+}
+#menu #anamenu li a:hover{
+color: cadetblue;
+}
+#menu #anamenu li a:acitve{
+color: gray;
+}
+
+
+#alt #altmenu{
+	text-align: center;
+	color: white;
+}
+#alt #altmenu #iconAlt{
+	width: 50px;
+	height: auto;
+	float: left;
+
+
+}
+
+/*anamenu içindeki liste içindeki liste*/
+#menu #anamenu ul li ul{
+	display: none;
+}
+/*anamenu içindeki liste içindeki listenin üzerine gidince*/
+#menu #anamenu ul li:hover ul{
+	display: block;
+}
+/*anamenu içindeki liste içindeki liste içinde elemanlar*/
+#menu #anamenu ul li ul li{
+	text-align: center;
+	display: table;
+	border: none;
+}
+/*liste içindeki listenin elemanlarının linkleri*/
+#menu #anamenu ul li ul li a{
+	color: white;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+#orta{
+	background: lightgray;
+
+
+}
+
+#alt{
+	background: black;
+}
+
+
+
+
+#orta #icerik #C1{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px purple; 
+}
+
+pre{
+	text-align: left;
+	position: relative;
+	left: 60px;
+}
+p{
+	font-size: 30px;
+	text-align: left;
+}
+#orta #icerik #C2{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px red; 
+}
+
+#orta #icerik #C3{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px yellow; 
+}
+
+#orta #icerik #C4{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkblue; 
+}
+
+#orta #icerik #C5{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkgreen; 
+}
+
+#orta #icerik #C6{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkred; 
+}
+
+#orta #icerik #C7{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkorange; 
+}
+
+#orta #icerik #C9{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkgreen; 
+}
+
+#orta #icerik #C10{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkblue; 
+}
+#orta #icerik #C10 p{
+	color: white;
+	font-size: 16px;
+}
+#orta #icerik #C11{
+	
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 250px;
+	text-align: center;
+	background: black;
+	box-shadow: 2px 2px 2px 4px darkblue; 
+}
+#orta #icerik #C11 p{
+	color: white;
+	font-size: 16px;
+}
+
+#yanmenu img{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	right: 0;
+	left: 5px;
+}
+

